@@ -1,29 +1,34 @@
 package io;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import io.Zaplata.Platnosc;
 import io.bilet_package.Bilet;
 import io.bilet_package.Wlasciciel;
 
 public class Aplikacja {
-//
-//	private ArrayList<Bilet> bilety = new ArrayList<Bilet>();
-//
+
+	private Map<Integer, Bilet> bilety = new HashMap<Integer, Bilet>();
+
 //	public String szukajBilet()                                         { return bilety.toString(); }
-//	public String szukajBiletZFiltrami(Filtry filtry)                   {
-//		ArrayList<Bilet> wynik = new ArrayList<Bilet>();
-//		for (Bilet bilet : bilety) {
-//			if(filtry.PoCenie&&(bilet.cena<filtry.cenaMin || bilet.cena>filtry.cenaMax))
-//				continue;
-//			if(filtry.PoDacie&&(bilet.lot.data != filtry.data))
-//				continue;
-//			if(filtry.poRegionie && bilet.lot.miejsce_wylotu!=filtry.region)
-//				continue;
-//			if(filtry.poKlasie && bilet.klasa != filtry.klasa)
-//				continue;
-//			wynik.append(bilet);
-//		}
-//		return wynik.toString();
-//	}
+	public ArrayList<Bilet> szukajBiletZFiltrami(Filtry filtry) {
+		ArrayList<Bilet> wynik = new ArrayList<Bilet>();
+		for (int id : bilety.keySet()) {
+			Bilet bilet = bilety.get(id);
+			if(filtry.PoCenie&&(bilet.getCena()<filtry.cenaMin || bilet.getCena()>filtry.cenaMax))
+				continue;
+			if(filtry.PoDacie&&(bilet.getLot().getData() != filtry.data))
+				continue;
+			if(filtry.poRegionie && bilet.getLot().getMiejsceWylotu()!=filtry.region)
+				continue;
+			if(filtry.poKlasie && bilet.getKlasa() != filtry.klasa)
+				continue;
+			wynik.add(bilet);
+		}
+		return wynik;
+	}
 //	public boolean czyMoznaZwrocic(int bilet)                           {
 //		if(bilety.get(bilet).lot.data_wylotu > now()+600);
 //
@@ -44,8 +49,8 @@ public class Aplikacja {
 	public String szukajBilet(){
 		return null;
 	}
-	public String szukajBiletZFiltrami(Filtry filtry){
-		return null;
+	public void dodajBilet(Bilet b){
+		bilety.put(b.id_biletu, b);
 	}
 	public boolean czyMoznaZwrocic(int bilet)                           {
 		return true;
@@ -54,10 +59,13 @@ public class Aplikacja {
 		bilet.kup(wlasciciel);
 		return null;
 	}
-	public ArrayList<Bilet> getBilety(){
-		return null; }
+	public int ileBiletow(){
+		return bilety.size();
+	}
 	public void zwrocBilet(Bilet bilet){}
-	public void zarezerwujBilet(int idBiletu, Wlasciciel wlasciciel){}
+	public void zarezerwujBilet(int idBiletu, Wlasciciel wlasciciel) {
+
+	}
 	public void wyslijBilet(Bilet bilet){}
 	public void poprawnoscPlatnosci(Platnosc Platnosc){}
 	public static void main(String[] args) {

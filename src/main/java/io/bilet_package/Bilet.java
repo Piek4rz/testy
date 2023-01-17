@@ -10,10 +10,25 @@ public class Bilet {
 	private int cena;
 	private int klasa;
 
-	public String wypisz() {
-		return "id_biletu() + ";
+	public Bilet(int id, Lot lot, int cena, int klasa) {
+		this.id_biletu = id;
+		this.lot = lot;
+		this.cena = cena;
+		this.klasa = klasa;
+		wlascicel = null;
 	}
 
+	public String wypisz() {
+		return lot.wypisz() + " " + String.valueOf(cena)  + " " + String.valueOf(klasa);
+	}
+
+	public int getCena() {
+		return cena;
+	}
+
+	public Wlasciciel getWlasciciel() {
+		return wlascicel;
+	}
 
 	public int kup(Wlasciciel wlasciciel) {
 		if(this.wlascicel == wlasciciel){
@@ -30,5 +45,13 @@ public class Bilet {
 		} else if(this.wlascicel==wlascicel)
 			return true;
 		return false;
+	}
+
+	public int getKlasa() {
+		return klasa;
+	}
+
+	public Lot getLot() {
+		return lot;
 	}
 }

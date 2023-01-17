@@ -1,6 +1,9 @@
 package io;
 
 import org.junit.jupiter.api.Test;
+
+import io.bilet_package.Bilet;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AplikacjaTest {
@@ -42,6 +45,16 @@ class AplikacjaTest {
     }
 
     @Test
-    void main(){
+    void dodajBilet(){
+			Bilet b = Dane.b;
+			Bilet b2 = Dane.b2;
+
+			Aplikacja a = new Aplikacja();
+			a.dodajBilet(b);
+			assertEquals(1, a.ileBiletow());
+			a.dodajBilet(b2);
+			assertEquals(2, a.ileBiletow());
+			a.dodajBilet(b);
+			assertEquals(2, a.ileBiletow());
     }
 }
