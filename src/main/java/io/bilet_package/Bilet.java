@@ -1,7 +1,5 @@
 package io.bilet_package;
 
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
-
 public class Bilet {
 
 	public int id_biletu;

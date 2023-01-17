@@ -13,7 +13,7 @@ public class Aplikacja {
 
 	private Map<Integer, Bilet> bilety = new HashMap<Integer, Bilet>();
 
-//	public String szukajBilet()                                         { return bilety.toString(); }
+	public String szukajBilet()                                         { return bilety.toString(); }
 	public ArrayList<Bilet> szukajBiletZFiltrami(Filtry filtry) {
 		ArrayList<Bilet> wynik = new ArrayList<Bilet>();
 		for (int id : bilety.keySet()) {
@@ -47,9 +47,6 @@ public class Aplikacja {
 //
 //	}
 
-	public String szukajBilet(){
-		return null;
-	}
 	public void dodajBilet(Bilet b){
 		bilety.put(b.id_biletu, b);
 	}

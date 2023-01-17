@@ -29,5 +29,5 @@ public class Filtry {
 	public boolean getPoKlasie()                                        {	return poKlasie; }
 	public void setPoKlasie(boolean poKlasie)                              {	this.poKlasie = poKlasie;}
 	public int getKlasa()                                               {	return klasa; }
-	public void setKlasa(int klasa) {}
+	public void setKlasa(int klasa) {this.klasa = klasa;}
 }
