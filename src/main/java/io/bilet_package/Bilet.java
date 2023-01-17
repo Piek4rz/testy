@@ -9,7 +9,12 @@ public class Bilet {
 	private Wlasciciel wlascicel;
 	private int cena;
 	private int klasa;
-
+	public Bilet(Bilet b) {
+		id_biletu = b.id_biletu;
+		lot = b.lot;
+		cena = b.cena;
+		klasa = b.klasa;
+	}
 	public Bilet(int id, Lot lot, int cena, int klasa) {
 		this.id_biletu = id;
 		this.lot = lot;

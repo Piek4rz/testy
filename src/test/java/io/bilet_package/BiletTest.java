@@ -10,8 +10,8 @@ class BiletTest {
 	
 	@Test
 	void getWlasciciel() {
-		Bilet b = Dane.b;
-		Wlasciciel w = Dane.w;
+		Bilet b = new Bilet(Dane.b);
+		Wlasciciel w = new Wlasciciel(Dane.w);
 		Assert.assertEquals(null, b.getWlasciciel());
 		b.zarezerwuj(w);
 		Assert.assertEquals(w, b.getWlasciciel());
@@ -19,8 +19,8 @@ class BiletTest {
 	
 	@Test
 	void kup() {
-		Bilet b = Dane.b;
-		Wlasciciel w = Dane.w;
+		Bilet b = new Bilet(Dane.b);
+		Wlasciciel w = new Wlasciciel(Dane.w);
 		Assert.assertEquals(-1, b.kup(w));
 		b.zarezerwuj(w);
 		Assert.assertEquals(15, b.kup(w));
@@ -28,9 +28,9 @@ class BiletTest {
 		
     @Test
     void zarezerwuj() {
-			Bilet b = Dane.b;
-			Wlasciciel w = Dane.w;
-			Wlasciciel w2 = Dane.w2;
+			Bilet b = new Bilet(Dane.b);
+			Wlasciciel w = new Wlasciciel(Dane.w);
+			Wlasciciel w2 = new Wlasciciel(Dane.w2);
 			b.zarezerwuj(w);
 			Assert.assertTrue(b.zarezerwuj(w));
 			Assert.assertFalse(b.zarezerwuj(w2));
@@ -38,16 +38,16 @@ class BiletTest {
 
 		@Test
 		void getKlasa(){
-			Bilet b = Dane.b;
+			Bilet b = new Bilet(Dane.b);
 			Assert.assertEquals(1, b.getKlasa());
 		}
 
 		@Test
 		void getLot(){
-			Bilet b = Dane.b;
+			Bilet b = new Bilet(Dane.b);
 			Lot l = Dane.l1;
 			Assert.assertEquals(l, b.getLot());
-			Lot l2 = Dane.l2;
+			Lot l2 = new Lot(Dane.l2);
 			Assert.assertNotEquals(l2, b.getLot());
 		}
 }

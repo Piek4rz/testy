@@ -12,6 +12,12 @@ public class Lot {
 		data = kiedy;
 	}
 
+	public Lot(Lot lot) {
+		miejsce_lądowania = lot.miejsce_lądowania;
+		miejsce_wylotu = lot.miejsce_wylotu;
+		data = lot.data;		
+	}
+
 	public String getData() {
 		return data;
 	}

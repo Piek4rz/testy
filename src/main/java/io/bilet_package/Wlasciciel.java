@@ -15,4 +15,11 @@ public class Wlasciciel {
 		this.plec = plec;
 	}
 
+	public Wlasciciel(Wlasciciel w){
+		imie = w.imie;
+		nazwisko = w.nazwisko;
+		adres = w.adres;
+		plec = w.plec;
+	}
+
 }
