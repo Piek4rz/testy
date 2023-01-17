@@ -3,6 +3,7 @@ package io;
 import org.junit.jupiter.api.Test;
 
 import io.bilet_package.Bilet;
+import io.bilet_package.Wlasciciel;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -36,14 +37,33 @@ class AplikacjaTest {
 
     @Test
     void czyMoznaZwrocic() {
+			Aplikacja a = new Aplikacja();
+			Bilet b1 = new Bilet(Dane.b);
+			Bilet b2 = new Bilet(Dane.b2);
+			Wlasciciel w = new Wlasciciel(Dane.w);
+			a.dodajBilet(b1);
+			a.dodajBilet(b2);
+			Filtry f = new Filtry();
+			for(Bilet b : a.szukajBiletZFiltrami(f)){
+				assertTrue(b.zarezerwuj(w));
+			}
     }
 
     @Test
     void kupBilet() {
-    }
-
-    @Test
-    void getBilety() {
+			Aplikacja a = new Aplikacja();
+			Bilet b1 = new Bilet(Dane.b);
+			Bilet b2 = new Bilet(Dane.b2);
+			Wlasciciel w = new Wlasciciel(Dane.w);
+			a.dodajBilet(b1);
+			a.dodajBilet(b2);
+			Filtry f = new Filtry();
+			for(Bilet b : a.szukajBiletZFiltrami(f)){
+				assertTrue(b.zarezerwuj(w));
+			}
+			for(Bilet b : a.szukajBiletZFiltrami(f)){
+				assertNotEquals(-1,  b.kup(w));
+			}
     }
 
     @Test
