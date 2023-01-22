@@ -20,7 +20,10 @@ public class Bilet {
 		this.klasa = klasa;
 		wlascicel = null;
 	}
-
+	
+	public void setWlascicel(Wlasciciel wlascicel) {
+		this.wlascicel = wlascicel;
+	}
 	public String wypisz() {
 		return lot.wypisz() + " " + String.valueOf(cena)  + " " + String.valueOf(klasa);
 	}
@@ -43,7 +46,7 @@ public class Bilet {
 
 	public boolean zarezerwuj(Wlasciciel wlascicel) {
 		if (this.wlascicel == null){
-			this.wlascicel = wlascicel;
+			setWlascicel(wlascicel);
 			return true;
 		} else if(this.wlascicel==wlascicel)
 			return true;

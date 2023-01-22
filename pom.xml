@@ -21,21 +21,23 @@
             <scope>test</scope>
         </dependency>
 			<dependency>
-				<groupId>org.jmockit</groupId>
-				<artifactId>jmockit</artifactId>
-				<version>1.49</version>
-				<scope>test</scope>
-   		</dependency>
+					<groupId>org.jmockit</groupId>
+					<artifactId>jmockit</artifactId>
+					<version>1.49</version>
+					<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>fit</groupId>
+				<artifactId>fit</artifactId>
+				<version>1.0</version>
+				<scope>system</scope>
+				<systemPath>${project.basedir}/TestyFitnesse/fitnesse-standalone.jar</systemPath>
+		</dependency>
     </dependencies>
 	<plugins>
    <plugin>
       <artifactId>maven-surefire-plugin</artifactId>
       <version>2.22.2</version> <!-- or some other version -->
-      <configuration>
-         <argLine>
-            -javaagent:"${settings.localRepository}"/org/jmockit/jmockit/${jmockit.version}/jmockit-${jmockit.version}.jar
-         </argLine>
-      </configuration>
    </plugin>
 </plugins>
 </project>
