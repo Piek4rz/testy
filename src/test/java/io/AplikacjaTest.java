@@ -1,16 +1,23 @@
 package io;
 
-import org.junit.jupiter.api.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 import io.bilet_package.Bilet;
 import io.bilet_package.Wlasciciel;
+import io.bilet_package.Categories.KupIRezerwujCategory;
 
-import static org.junit.jupiter.api.Assertions.*;
 
-class AplikacjaTest {
+public class AplikacjaTest {
 
     @Test
-    void szukajBilet() {
+    public void szukajBilet() {
 			Aplikacja a = new Aplikacja();
 			Bilet b = new Bilet(Dane.b);
 			a.dodajBilet(b);
@@ -18,7 +25,7 @@ class AplikacjaTest {
     }
 
     @Test
-    void szukajBiletZFiltrami() {
+    public void szukajBiletZFiltrami() {
 			Aplikacja a = new Aplikacja();
 			Bilet b1 = new Bilet(Dane.b);
 			Bilet b2 = new Bilet(Dane.b2);
@@ -36,7 +43,7 @@ class AplikacjaTest {
     }
 
     @Test
-    void czyMoznaZwrocic() {
+    public void czyMoznaZwrocic() {
 			Aplikacja a = new Aplikacja();
 			Bilet b1 = new Bilet(Dane.b);
 			Bilet b2 = new Bilet(Dane.b2);
@@ -50,7 +57,8 @@ class AplikacjaTest {
     }
 
     @Test
-    void kupBilet() {
+		@Category(KupIRezerwujCategory.class)
+    public void kupBilet() {
 			Aplikacja a = new Aplikacja();
 			Bilet b1 = new Bilet(Dane.b);
 			Bilet b2 = new Bilet(Dane.b2);
@@ -67,23 +75,7 @@ class AplikacjaTest {
     }
 
     @Test
-    void zwrocBilet() {
-    }
-
-    @Test
-    void zarezerwujBilet() {
-    }
-
-    @Test
-    void wyslijBilet() {
-    }
-
-    @Test
-    void poprawnoscPlatnosci() {
-    }
-
-    @Test
-    void dodajBilet(){
+    public void dodajBilet(){
 			Bilet b = Dane.b;
 			Bilet b2 = Dane.b2;
 

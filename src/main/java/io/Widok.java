@@ -6,8 +6,6 @@ import io.bilet_package.Wlasciciel;
 
 import java.util.Scanner;
 
-import java.util.Scanner;
-
 public class Widok {
 	Aplikacja aplikacja;
 	Filtry filtry;
