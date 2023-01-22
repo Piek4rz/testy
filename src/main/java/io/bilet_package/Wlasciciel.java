@@ -22,4 +22,8 @@ public class Wlasciciel {
 		plec = w.plec;
 	}
 
+	public String wypisz(){
+		return imie + " " + nazwisko + " " + adres + " " + String.valueOf(plec);
+	}
+
 }

@@ -1,0 +1,5 @@
+!|io.Fitnesse.ZarezerwujBiletTest                                            |
+|dane                               |zarezerwowano?|getWlasciciel?           |
+|Adam, Adamski, Wrocław, true       |true          |Adam Adamski Wrocław true|
+|Adam, Adamski, Wrocław, true       |true          |Adam Adamski Wrocław true|
+|Wojciech, Kowalski, Warszawa, false|false         |Adam Adamski Wrocław true|

@@ -48,7 +48,7 @@ public class Bilet {
 		if (this.wlascicel == null){
 			setWlascicel(wlascicel);
 			return true;
-		} else if(this.wlascicel==wlascicel)
+		} else if(this.wlascicel.equals(wlascicel))
 			return true;
 		return false;
 	}

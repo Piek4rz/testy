@@ -1,0 +1,8 @@
+---
+Test
+---
+!|io.Fitnesse.BiletDodajTest                                       |
+|dane                                   |dodajBilet?|liczbaBiletów?|
+|0, Warszawa, Wrocław, 22.01.2023, 27, 1|true       |1             |
+|1, Łódź, Wrocław, 21.01.2023, 12, 2    |true       |2             |
+|1, Gdynia, Wrocław, 18.01.2023, 10, 1  |false      |2             |

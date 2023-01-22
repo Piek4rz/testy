@@ -58,6 +58,17 @@ public class BiletTest {
 		Assert.assertEquals(w, b.getWlasciciel());
 	}
 
+	@Test
+	public void zarezerwujAleNieSparametryzowany(){
+		Bilet b = new Bilet(Dane.b);
+		Wlasciciel w = new Wlasciciel(Dane.w);
+		Wlasciciel w2 = new Wlasciciel(Dane.w);
+		assertFalse(w==w2);
+		assertTrue( b.zarezerwuj(w));
+		assertTrue( b.zarezerwuj(w));
+		assertTrue( b.zarezerwuj(w2));
+	}
+
 		@Test
 		@Category({KupIRezerwujCategory.class, ParametrisedTests.class})
     public void zarezerwuj() {

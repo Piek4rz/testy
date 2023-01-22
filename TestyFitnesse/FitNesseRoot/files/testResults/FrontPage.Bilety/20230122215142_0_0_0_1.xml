@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<suiteResults>
+  <FitNesseVersion>v20221219</FitNesseVersion>
+  <rootPath>FrontPage.Bilety</rootPath>
+  <pageHistoryReference>
+    <name>FrontPage.Bilety.DodawanieBiletu</name>
+    <date>2023-01-22T21:51:42+01:00</date>
+    <pageHistoryLink>FrontPage.Bilety.DodawanieBiletu?pageHistory&amp;resultDate=20230122215142</pageHistoryLink>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>1</exceptions>
+    </counts>
+    <runTimeInMillis>77</runTimeInMillis>
+  </pageHistoryReference>
+  <executionLog>
+    <testSystem>fit:fit.FitServer</testSystem>
+    <command>java -cp /Users/bartek/Scripts/Studia/IO_lab/testy/TestyFitnesse/fitnesse-standalone.jar fit.FitServer MacBook-Air-Bartek.local 50866 3863</command>
+    <exitCode>1</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>797</totalRunTimeInMillis>
+</suiteResults>
+

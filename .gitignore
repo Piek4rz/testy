@@ -38,4 +38,4 @@ build/
 .DS_Store
 
 ### Testy Fitnesse ###
-TestyFitnesse/FitNesseRoot
+# TestyFitnesse/FitNesseRoot
